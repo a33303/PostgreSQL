@@ -1,0 +1,43 @@
+PS C:\Users\Max\Desktop\Перенос dump> scp carmodels.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+carmodels.dump.sql                                                                    100%   10KB 214.2KB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp tyrespecifications.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+tyrespecifications.dump.sql                                                           100%   29KB  18.3MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp wheelspecifications.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+wheelspecifications.dump.sql                                                          100%   24KB  15.4MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp specificationtype.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+specificationtype.dump.sql                                                            100%  331     7.4KB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp users.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+users.dump.sql                                                                        100% 7374     4.6MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp clients.dumo.sql.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+clients.dumo.sql.sql                                                                         100% 3714     3.5MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp tyres_in_stock.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+tyres_in_stock.dump.sql                                                               100% 8961     5.6MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp wheels_in_stock.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+wheels_in_stock.dump.sql                                                              100% 4605     4.3MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp drivers.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+drivers.dump.sql                                                                      100% 6659     6.2MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp logistics.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+logistics.dump.sql                                                                    100% 4014     3.7MB/s   00:00
+
+PS C:\Users\Max\Desktop\Перенос dump> scp orders.dump.sql user@192.168.0.184:~/dump_DB
+user@192.168.0.184's password:
+orders.dump.sql                                                                       100% 2681     2.5MB/s   00:00
