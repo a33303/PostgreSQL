@@ -3,12 +3,12 @@ DROP TABLE orders;
 CREATE TABLE orders (				
 	id SERIAL PRIMARY KEY,			
 	client_id INTEGER NOT NULL,			
-	tyres_id INTEGER,			
-	wheels_id INTEGER,			
+	tyres_in_stock_id INTEGER,
+	wheels_in_stock_id INTEGER,
 	logistic_id INTEGER NOT NULL			
 );				
 				
-INSERT INTO  orders (id, client_id, tyres_id, wheels_id, logistic_id) 				
+INSERT INTO  orders (id, client_id, tyres_in_stock_id, wheels_in_stock_id, logistic_id)
 VALUES 				
 				
 (1,	50,	12,	NULL,	1),

@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS tyres_in_stock;
 
 CREATE TABLE tyres_in_stock (
 	id SERIAL PRIMARY KEY,
-	tyrespecification_id INTEGER NOT NULL,
+	tyre_specification_id INTEGER NOT NULL,
 	brand VARCHAR(20) NOT NULL,
 	model VARCHAR(20) NOT NULL,
 	width INTEGER NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE tyres_in_stock (
 );
 
 
-INSERT INTO  tyres_in_stock (id, tyrespecification_id, brand, model, width, profile, diameter, speed_indicator, load_indicator, season, spikes, run_of_flat) 
+INSERT INTO  tyres_in_stock (id, tyre_specification_id, brand, model, width, profile, diameter, speed_indicator, load_indicator, season, spikes, run_of_flat)
 VALUES 
 (1,	1,	'Nokian',	'Hakkapelliitta 8',	205,	60,	16,	95,	'T',	'winter',	TRUE,	NULL),
 (2,	2,	'Nokian',	'Hakkapelliitta 9',	215,	50,	17,	98,	'T',	'winter',	TRUE,	NULL),

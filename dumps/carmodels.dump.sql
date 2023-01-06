@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS carmodels;
+DROP TABLE IF EXISTS car_models;
 
-CREATE TABLE carmodels (
+CREATE TABLE car_models (
 	id SERIAL PRIMARY KEY,
 	vendor VARCHAR(300) NOT NULL,
 	model VARCHAR(300) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE carmodels (
 	bolt VARCHAR(300) NOT NULL
 );
 
-INSERT INTO carmodels (id, vendor, model, year, modification, lz, pcd, dia, bolt) 
+INSERT INTO car_models (id, vendor, model, year, modification, lz, pcd, dia, bolt)
 VALUES 
   (1, 'Acura', 'CL', 2003, '3.2 i', 5, 114.3, 67.1, 'Гайка: 12*1.5'),
   (2, 'Acura', 'CL', 2003, '3.2 i Type S', 5, 114.3, 67.1, 'Гайка: 12*1.5'),

@@ -3,12 +3,12 @@ DROP TABLE IF EXISTS "clients";
 CREATE TABLE "clients" (
   id SERIAL PRIMARY KEY,
   user_id integer NULL,
-  carmodel_id integer NULL,
+  car_model_id integer NULL,
   order_id integer NULL,
   created_at varchar(255)
 );
 
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (26,88,5,'2019-11-03 01:17:35'),
   (35,90,80,'2019-10-10 23:27:48'),
@@ -20,7 +20,7 @@ VALUES
   (49,3,97,'2020-03-28 18:31:33'),
   (64,56,8,'2019-03-05 11:55:40'),
   (79,37,100,'2020-05-01 00:04:06');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (83,73,38,'2017-12-11 14:36:17'),
   (69,46,92,'2018-07-01 16:54:20'),
@@ -32,7 +32,7 @@ VALUES
   (31,26,87,'2020-04-13 15:26:48'),
   (96,39,25,'2022-05-12 22:00:15'),
   (37,58,15,'2021-11-29 10:23:41');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (8,77,56,'2020-07-06 02:12:33'),
   (74,30,71,'2023-04-25 01:44:48'),
@@ -44,7 +44,7 @@ VALUES
   (37,85,39,'2023-06-10 09:57:25'),
   (25,27,15,'2022-09-03 23:25:27'),
   (9,93,5,'2019-08-11 14:18:12');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (57,57,9,'2018-04-30 22:39:14'),
   (99,22,31,'2019-01-11 05:44:52'),
@@ -56,7 +56,7 @@ VALUES
   (89,54,80,'2020-03-18 13:29:26'),
   (7,23,94,'2021-06-20 10:34:04'),
   (39,94,77,'2018-04-28 17:33:23');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (87,85,54,'2021-10-07 18:03:36'),
   (24,60,69,'2018-08-11 17:24:20'),
@@ -68,7 +68,7 @@ VALUES
   (61,16,73,'2021-04-17 05:38:36'),
   (37,17,79,'2023-05-28 15:45:43'),
   (4,73,4,'2021-06-17 07:01:46');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (53,76,71,'2022-09-04 05:24:08'),
   (14,65,97,'2018-01-04 22:28:49'),
@@ -80,7 +80,7 @@ VALUES
   (31,64,88,'2023-05-18 20:02:41'),
   (48,99,59,'2022-10-05 12:21:17'),
   (35,60,7,'2023-01-10 22:08:47');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (51,8,1,'2022-12-04 18:15:28'),
   (11,6,57,'2019-04-20 04:40:14'),
@@ -92,7 +92,7 @@ VALUES
   (25,36,11,'2019-12-18 09:55:42'),
   (45,69,67,'2023-11-28 05:41:10'),
   (51,99,15,'2021-12-31 17:58:50');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (35,24,10,'2021-07-11 15:42:03'),
   (74,94,81,'2020-03-31 10:03:21'),
@@ -104,7 +104,7 @@ VALUES
   (20,30,60,'2018-01-11 18:00:31'),
   (53,18,49,'2018-08-23 04:39:48'),
   (36,40,26,'2023-02-22 23:53:57');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (38,4,62,'2019-12-26 12:05:41'),
   (67,96,97,'2023-02-10 12:55:33'),
@@ -116,7 +116,7 @@ VALUES
   (43,47,59,'2021-01-18 12:06:50'),
   (33,70,11,'2021-08-10 19:37:18'),
   (4,13,35,'2022-08-21 15:53:14');
-INSERT INTO clients (user_id,carmodel_id,order_id,created_at)
+INSERT INTO clients (user_id,car_model_id,order_id,created_at)
 VALUES
   (27,41,54,'2023-11-10 04:12:43'),
   (28,30,58,'2021-03-10 06:30:44'),

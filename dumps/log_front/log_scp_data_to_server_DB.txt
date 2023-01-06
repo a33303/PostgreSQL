@@ -1,12 +1,12 @@
-PS C:\Users\Max\Desktop\Перенос dump> scp carmodels.dump.sql user@192.168.0.184:~/dump_DB
+PS C:\Users\Max\Desktop\Перенос dump> scp car_models.dump.sql user@192.168.0.184:~/dump_DB
 user@192.168.0.184's password:
 carmodels.dump.sql                                                                    100%   10KB 214.2KB/s   00:00
 
-PS C:\Users\Max\Desktop\Перенос dump> scp tyrespecifications.dump.sql user@192.168.0.184:~/dump_DB
+PS C:\Users\Max\Desktop\Перенос dump> scp tyre_specifications.dump.sql user@192.168.0.184:~/dump_DB
 user@192.168.0.184's password:
 tyrespecifications.dump.sql                                                           100%   29KB  18.3MB/s   00:00
 
-PS C:\Users\Max\Desktop\Перенос dump> scp wheelspecifications.dump.sql user@192.168.0.184:~/dump_DB
+PS C:\Users\Max\Desktop\Перенос dump> scp wheel_specifications.dump.sql user@192.168.0.184:~/dump_DB
 user@192.168.0.184's password:
 wheelspecifications.dump.sql                                                          100%   24KB  15.4MB/s   00:00
 

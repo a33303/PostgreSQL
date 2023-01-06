@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS wheels_in_stock;
 	
 CREATE TABLE wheels_in_stock (	
 	id SERIAL PRIMARY KEY,
-	wheelspecifications_id INTEGER NOT NULL,
+	wheel_specifications_id INTEGER NOT NULL,
 	brand VARCHAR(20) NOT NULL,
 	model VARCHAR(20) NOT NULL,
 	width INTEGER NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE wheels_in_stock (
 	et INTEGER NOT NULL
 );	
 
-INSERT INTO  wheels_in_stock (id, wheelspecifications_id, brand, model, width, diameter, et) 
+INSERT INTO  wheels_in_stock (id, wheel_specifications_id, brand, model, width, diameter, et)
 VALUES 
 (1,	1,	'BBS',	'AI002',	6.5,	16,	45),
 (2,	2,	'BBS',	'CF003',	7,	17,	48),

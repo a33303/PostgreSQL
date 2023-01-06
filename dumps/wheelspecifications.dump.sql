@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS wheelspecifications;
+DROP TABLE IF EXISTS wheel_specifications;
 
-CREATE TABLE wheelspecifications (
+CREATE TABLE wheel_specifications (
   id SERIAL PRIMARY KEY,
-  carmodel INTEGER NOT NULL,
-  spectype VARCHAR(20) NOT NULL,
+  car_model_id INTEGER NOT NULL,
+  spec_type VARCHAR(20) NOT NULL,
   front_width FLOAT NOT NULL,
   front_diameter FLOAT NOT NULL,
   front_et FLOAT NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE wheelspecifications (
   back_et FLOAT DEFAULT NULL
  );
 
-INSERT INTO wheelspecifications (id, carmodel, spectype, front_width, front_diameter, front_et, back_width, back_diameter, back_et) VALUES 
+INSERT INTO wheel_specifications (id, car_model_id, spec_type, front_width, front_diameter, front_et, back_width, back_diameter, back_et) VALUES
   (1, 1, 'DEFAULT', 6.5, 16, 45, NULL, NULL, NULL),
   (2, 1, 'ALTERNATIVE', 7, 17, 48, NULL, NULL, NULL),
   (3, 1, 'ALTERNATIVE', 7.5, 18, 48, NULL, NULL, NULL),

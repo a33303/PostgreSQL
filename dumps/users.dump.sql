@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS "users";
+DROP TABLE IF EXISTS users;
 
-CREATE TABLE "users" (
+CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   first_name varchar(255) default NULL,
   last_name varchar(255) default NULL,
