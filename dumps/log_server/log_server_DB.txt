@@ -1,0 +1,98 @@
+postgres=# CREATE DATABASE tyres_shop;
+CREATE DATABASE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE tyres_shop to gb_user;
+GRANT
+postgres=# \q
+postgres@user-VirtualBox:~$ pg_dump tyres_shop > tyres_shop.dump.sql
+
+postgres@user-VirtualBox:/var/lib$ cd ..
+postgres@user-VirtualBox:/var$ cd ..
+postgres@user-VirtualBox:/$ ls
+bin    dev   lib    libx32	mnt   root  snap      sys  var
+boot   etc   lib32  lost+found	opt   run   srv       tmp
+cdrom  home  lib64  media	proc  sbin  swapfile  usr
+
+postgres@user-VirtualBox:/$ cd ./home/
+postgres@user-VirtualBox:/home$ cd ./user/
+postgres@user-VirtualBox:/home/user$ cd ./dump_DB/
+
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < carmodels.dump.sql 
+DROP TABLE
+CREATE TABLE
+INSERT 0 128
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < tyrespecifications.dump.sql DROP TABLE
+CREATE TABLE
+INSERT 0 495
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < wheelspecifications.dump.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 427
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < specificationtype.dump.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 3
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < users.dump.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < clients.dumo.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+INSERT 0 10
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < tyres_in_stock.dump.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 100
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < wheels_in_stock.dump.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 100
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < orders.dump.sql
+CREATE TABLE
+INSERT 0 100
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < logistics.dump.sql
+CREATE TABLE
+INSERT 0 100
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < drivers.dump.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 100
+
+postgres@user-VirtualBox:/home/user/dump_DB$ psql tyres_shop < drivers.dump.sql
+DROP TABLE
+CREATE TABLE
+INSERT 0 100
+
+
+postgres@user-VirtualBox:~$ pg_dump tyres_shop > tyres_shop.dump.sql
+
+
