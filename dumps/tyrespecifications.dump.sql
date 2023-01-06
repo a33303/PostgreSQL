@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS tyrespecifications;
+DROP TABLE IF EXISTS tyre_specifications;
 
-CREATE TABLE tyrespecifications (
+CREATE TABLE tyre_specifications (
   id SERIAL PRIMARY KEY,
-  carmodel INTEGER NOT NULL,
-  spectype VARCHAR NOT NULL,
+  car_model_id INTEGER NOT NULL,
+  spec_type VARCHAR NOT NULL,
   front_width INTEGER NOT NULL,
   front_profile INTEGER NOT NULL,
   front_diameter INTEGER NOT NULL,
@@ -12,7 +12,8 @@ CREATE TABLE tyrespecifications (
   back_diameter INTEGER DEFAULT NULL
 );
 
-INSERT INTO tyrespecifications (id, carmodel, spectype, front_width, front_profile, front_diameter, back_width, back_profile, back_diameter) VALUES 
+INSERT INTO tyre_specifications (id, car_model_id, spec_type, front_width, front_profile, front_diameter, back_width, back_profile, back_diameter)
+VALUES
   (1, 1, 'DEFAULT', 205, 60, 16, NULL, NULL, NULL),
   (2, 1, 'ALTERNATIVE', 215, 50, 17, NULL, NULL, NULL),
   (3, 1, 'ALTERNATIVE', 225, 45, 18, NULL, NULL, NULL),
