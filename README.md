@@ -30,5 +30,6 @@ Cодержание проекта:<br>
 
 
 
-![ERD schema](https://user-images.githubusercontent.com/64500585/210064366-2ccb4899-917a-406b-bae2-7ddea5c141bf.png)
+![ERD_schema](https://user-images.githubusercontent.com/64500585/211018291-9b7c402a-b7a2-4e22-b08f-dc45cd113d71.png)
+
 
