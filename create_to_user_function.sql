@@ -7,13 +7,13 @@ $$
 DECLARE search_orders RECORD;
 BEGIN
 	FOR search_orders IN
-		SELECT orders.wheels_id 
+		SELECT orders.wheels_in_stock_id 
 		FROM orders
 		JOIN wheels_in_stock
-		ON orders.wheels_id = wheels_in_stock.id
-		 WHERE orders.wheels_id != wheels_in_stock.id
+		ON orders.wheels_in_stock_id = wheels_in_stock.id
+		 WHERE orders.wheels_in_stock_id IS NULL
 	LOOP
-		UPDATE orders SET wheels_id = NULL WHERE id = search_orders.id;
+		UPDATE orders SET wheels_in_stock_id = NULL WHERE id = search_orders.id;
 	END LOOP;
 	COMMIT;
 END;
@@ -29,13 +29,13 @@ $$
 DECLARE search_orders RECORD;
 BEGIN
 	FOR search_orders IN
-		SELECT orders.tyres_id 
+		SELECT orders.tyres_in_stock_id 
 		FROM orders
 		JOIN tyres_in_stock
-		ON orders.tyres_id = tyres_in_stock.id
-		 WHERE orders.tyres_id != tyres_in_stock.id
+		ON orders.tyres_in_stock_id = tyres_in_stock.id
+		 WHERE orders.tyres_in_stock_id IS NULL
 	LOOP
-		UPDATE orders SET tyres_id = NULL WHERE id = search_orders.id;
+		UPDATE orders SET tyres_in_stock_id = NULL WHERE id = search_orders.id;
 	END LOOP;
 	COMMIT;
 END;

@@ -20,16 +20,16 @@ FROM logistics
 			ON users.id = clients.user_id
 		ON orders.client_id = clients.user_id
 		LEFT JOIN tyres_in_stock 
-		ON orders.tyres_id = tyres_in_stock.id
+		ON orders.tyres_in_stock_id = tyres_in_stock.id
 		LEFT JOIN wheels_in_stock 
-			INNER JOIN wheelspecifications 
-				INNER JOIN carmodels 
-				ON carmodels.id = wheelspecifications.carmodel
-			ON wheels_in_stock.wheelspecifications_id = wheelspecifications.id 
-		ON orders.wheels_id = wheels_in_stock.id
+			INNER JOIN wheel_specifications 
+				INNER JOIN car_models 
+				ON car_models.id = wheel_specifications.car_model_id
+			ON wheels_in_stock.wheel_specifications_id = wheel_specifications.id 
+		ON orders.wheels_in_stock_id = wheels_in_stock.id
 	ON logistics.order_id = orders.id
 	LEFT JOIN drivers 
-	ON Drivers.id = logistics.driver_id
+	ON drivers.id = logistics.driver_id
 ORDER BY order_id;
 
 -- Представление проданного товара за указанный период
@@ -37,10 +37,10 @@ DROP VIEW logistic_orders_analyst;
 
 CREATE VIEW logistic_orders_analyst AS
 SELECT
-	COUNT(DISTINCT tyres_id) AS tyres_order,
-	COUNT(DISTINCT wheels_id) AS wheels_order,
-	COUNT(DISTINCT logistic_id) AS logistic_order,
-	COUNT(DISTINCT orders.id) AS total_order,
+	COUNT (tyres_in_stock_id) AS tyres_order,
+	COUNT (wheels_in_stock_id) AS wheels_order,
+	COUNT (logistic_id) AS logistic_order,
+	COUNT (orders.id) AS total_order,
 	to_char(logistic_date, 'YYYY') AS logistic_date
 FROM logistics
 	INNER JOIN orders

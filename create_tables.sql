@@ -1,5 +1,5 @@
 --Таблица каталога машин
-CREATE TABLE carmodels (
+CREATE TABLE car_models (
 	id SERIAL PRIMARY KEY,
 	vendor VARCHAR(300) NOT NULL,
 	model VARCHAR(300) NOT NULL,
@@ -12,16 +12,16 @@ CREATE TABLE carmodels (
 );
 
 --Таблица спецификация подвида
-CREATE TABLE specificationtype (
+CREATE TABLE specification_type (
   spec_type VARCHAR(20) PRIMARY KEY,
   description VARCHAR(255) DEFAULT NULL
 );
 
 -- Таблица каталога шин
-CREATE TABLE tyrespecifications (
+CREATE TABLE tyre_specifications (
   id SERIAL PRIMARY KEY,
-  carmodel INTEGER NOT NULL,
-  spectype VARCHAR NOT NULL,
+  car_model_id INTEGER NOT NULL,
+  spec_type VARCHAR NOT NULL,
   front_width INTEGER NOT NULL,
   front_profile INTEGER NOT NULL,
   front_diameter INTEGER NOT NULL,
@@ -31,10 +31,10 @@ CREATE TABLE tyrespecifications (
 );
 
  -- Таблица каталога дисков
- CREATE TABLE wheelspecifications (
+ CREATE TABLE wheel_specifications (
   id SERIAL PRIMARY KEY,
-  carmodel INTEGER NOT NULL,
-  spectype VARCHAR(20) NOT NULL,
+  car_model_id INTEGER NOT NULL,
+  spec_type VARCHAR(20) NOT NULL,
   front_width FLOAT NOT NULL,
   front_diameter FLOAT NOT NULL,
   front_et FLOAT NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE tyrespecifications (
 --Таблица клиентов
 CREATE TABLE clients (
 	user_id SERIAL PRIMARY KEY,
-	carmodel_id INT NOT NULL,
+	car_model_id INT NOT NULL,
 	order_id INT NOT NULL,
 	created_at TIMESTAMP
 );
@@ -63,7 +63,7 @@ CREATE TABLE clients (
 --Таблица шин на складе
 CREATE TABLE tyres_in_stock (
 	id SERIAL PRIMARY KEY,
-	tyrespecification_id INTEGER NOT NULL,
+	tyre_specification_id INTEGER NOT NULL,
 	brand VARCHAR(20) NOT NULL,
 	model VARCHAR(20) NOT NULL,
 	width INTEGER NOT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE tyres_in_stock (
 --Таблица шин на складе
 CREATE TABLE wheels_in_stock (
 	id SERIAL PRIMARY KEY,
-	wheelspecifications_id INTEGER NOT NULL,
+	wheel_specifications_id INTEGER NOT NULL,
 	brand VARCHAR(20) NOT NULL,
 	model VARCHAR(20) NOT NULL,
 	width INTEGER NOT NULL,
@@ -91,8 +91,8 @@ CREATE TABLE wheels_in_stock (
 CREATE TABLE orders (
 	id SERIAL PRIMARY KEY,
 	client_id INTEGER NOT NULL,
-	tyres_id INTEGER,
-	wheels_id INTEGER,
+	tyres_in_stock_id INTEGER,
+	wheels_in_stock_id INTEGER,
 	logistic_id INTEGER NOT NULL
 );
 
